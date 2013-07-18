@@ -285,7 +285,7 @@ jQuery.extend({
 if ( window.getComputedStyle ) {
 	curCSS = function( elem, name ) {
 		var ret, width, minWidth, maxWidth,
-			computed = window.getComputedStyle( elem, null ),
+			computed = elem.ownerDocument.defaultView.getComputedStyle( elem, null ),
 			style = elem.style;
 
 		if ( computed ) {
